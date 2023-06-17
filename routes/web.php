@@ -24,6 +24,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Lokasi
+
 //Website
 Route::get('/', [WebsiteController::class, 'home'])->name('home');
 

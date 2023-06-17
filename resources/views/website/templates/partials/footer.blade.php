@@ -77,6 +77,7 @@
                         <a href="#" class="menu-link px-2">English</a>
                     </li>
                 </ul>
+                {{-- <h1>{{App::currentLocale()}}</h1> --}}
             </div>
         </div>
     </div>
