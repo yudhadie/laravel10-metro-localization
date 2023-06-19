@@ -1,4 +1,4 @@
-<div class="mb-0 mt-10">
+<div class="mb-0 mt-10" id="footer">
     <div class="landing-curve landing-dark-color">
         <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z" fill="currentColor"></path>
@@ -71,13 +71,12 @@
                 </div>
                 <ul class="menu menu-gray-600 menu-hover-primary fw-semibold fs-6 fs-md-5 order-1 mb-5 mb-md-0">
                     <li class="menu-item">
-                        <a href="#" class="menu-link px-2 text-primary">Indonesia</a>
+                        <a href="lang/id" class="menu-link px-2 {{ Lang::locale() == 'id' ? 'text-primary' : '' }}">Indonesia</a>
                     </li>
                     <li class="menu-item mx-5">
-                        <a href="#" class="menu-link px-2">English</a>
+                        <a href="lang/en" class="menu-link px-2 {{ Lang::locale() == 'en' ? 'text-primary' : '' }}">English</a>
                     </li>
                 </ul>
-                {{-- <h1>{{App::currentLocale()}}</h1> --}}
             </div>
         </div>
     </div>

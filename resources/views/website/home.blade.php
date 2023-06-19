@@ -13,7 +13,7 @@
                 <div class="d-flex flex-column flex-center w-100 min-h-350px min-h-lg-500px px-9">
                     <div class="text-center mb-5 mb-lg-10 py-10 py-lg-20">
                         <h1 class="text-white lh-base fw-bold fs-2x fs-lg-3x mb-15">
-                            Inovasi untuk Kehidupan yang Lebih Baik Bersama
+                            {{ __('home.baner') }}
                             <br>
                             <span style="background: linear-gradient(to right, #12CE5D 0%, #FFD80C 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
                                 <span id="kt_landing_hero_text">JJPROMOTION</span>
@@ -35,10 +35,9 @@
         <div class="mb-n10 mb-lg-n20 z-index-2">
             <div class="container">
                 <div class="text-center mb-17">
-                    <h3 class="fs-2hx text-dark mb-5" id="content" data-kt-scroll-offset="{default: 100, lg: 150}">Content</h3>
+                    <h3 class="fs-2hx text-dark mb-5" id="content" data-kt-scroll-offset="{default: 100, lg: 150}"> {{ __('home.content') }}</h3>
                     <div class="fs-5 text-muted fw-bold">
-                        Ini adalah contoh konten
-                        <br />default bahasa adalah indonesia
+                        {{ __('home.content_desc') }}
                     </div>
                 </div>
                 <div class="row w-100 gy-10 mb-md-20">
