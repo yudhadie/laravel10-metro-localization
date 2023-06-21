@@ -11,6 +11,10 @@ return [
     | Jangan ragu untuk mengoptimalkan setiap pesan yang ada di sini.
     |
     */
+    'notempty'        => 'Data ini tidak boleh kosong !',
+    'notusername'     => 'Silahkan isi email / username !',
+    'notemail'        => 'Silahkan isi email !',
+    'notdrop'         => 'Silahkan pilih data !',
 
     'accepted'        => ':attribute harus diterima.',
     'active_url'      => ':attribute bukan URL yang valid.',

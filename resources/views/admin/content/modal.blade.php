@@ -44,11 +44,13 @@
                         </div>
                     </div>
                     <div class="text-center pt-15">
-                        <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Discard</button>
+                        <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">{{ __('button.cancel') }}</button>
                         <button type="submit" class="btn btn-primary" id="modal_form_submit">
-                            <span class="indicator-label">Submit</span>
-                            <span class="indicator-progress">Please wait...
-                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                            <span class="indicator-label">{{ __('button.save') }}</span>
+                            <span class="indicator-progress">
+                                {{ __('button.wait') }}
+                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                            </span>
                         </button>
                     </div>
                 </form>
@@ -101,17 +103,19 @@
                                 <textarea class="form-control form-control-solid" name="desc" id="desc" placeholder="isi Content" data-kt-autosize="true" required></textarea>
                             </div>
                             <div class="col-12 mb-5 text-end">
-                                <button class="btn btn-sm btn-danger" id="delete">Delete</button>
+                                <button class="btn btn-sm btn-danger" id="delete">{{ __('button.delete') }}</button>
                             </div>
                         </div>
                     </div>
                     <input type="hidden" id="data_id" name="data_id" />
                     <div class="text-center pt-15">
-                        <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Discard</button>
+                        <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">{{ __('button.cancel') }}</button>
                         <button type="submit" class="btn btn-primary" id="modal_update_submit">
-                            <span class="indicator-label">Update</span>
-                            <span class="indicator-progress">Please wait...
-                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                            <span class="indicator-label">{{ __('button.update') }}</span>
+                            <span class="indicator-progress">
+                                {{ __('button.wait') }}
+                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                            </span>
                         </button>
                     </div>
                 </form>

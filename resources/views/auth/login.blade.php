@@ -18,8 +18,8 @@
 							<form class="form w-100" id="modal_form_login" method="POST" action="{{ route('login') }}">
                                 @csrf
 								<div class="text-center mb-11">
-									<h1 class="text-dark fw-bolder mb-3">Sign In</h1>
-									<div class="text-gray-500 fw-semibold fs-6">Dashboard Aplication</div>
+									<h1 class="text-dark fw-bolder mb-3">{{ __('auth.sign') }}</h1>
+									<div class="text-gray-500 fw-semibold fs-6">{{ __('auth.dashboard') }}</div>
 								</div>
 
                                 @include('admin.templates.partials.alert')
@@ -34,20 +34,22 @@
                                     <label class="form-check form-check-custom form-check-solid">
                                         <input class="form-check-input" type="checkbox" name="remember" value=""/>
                                         <span class="form-check-label">
-                                            <div class="text-gray-500 fw-semibold fs-6">Remember</div>
+                                            <div class="text-gray-500 fw-semibold fs-6">{{ __('auth.remember') }}</div>
                                         </span>
                                     </label>
                                 </div>
 
 								<div class="d-grid mb-10">
 									<button type="submit" id="form_submit" class="btn btn-primary">
-										<span class="indicator-label">Sign In</span>
-										<span class="indicator-progress">Please wait...
-										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+										<span class="indicator-label">{{ __('button.sign') }}</span>
+										<span class="indicator-progress">
+                                            {{ __('button.wait') }}
+										    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                        </span>
 									</button>
 								</div>
 								<div class="text-gray-500 text-center fw-semibold fs-6">
-                                    <a href="{{ route('password.request') }}" class="link-primary">Lupa Password ?</a>
+                                    <a href="{{ route('password.request') }}" class="link-primary">{{ __('auth.forgot') }}</a>
                                 </div>
 							</form>
 						</div>
@@ -65,14 +67,14 @@
                         'identity': {
                             validators: {
                                 notEmpty: {
-                                    message: 'Silahkan isi username / email!'
+                                    message: '{{ __('validation.notusername') }}'
                                 }
                             }
                         },
                         'password': {
                             validators: {
                                 notEmpty: {
-                                    message: 'Silahkan isi password!'
+                                    message: '{{ __('validation.notempty') }}'
                                 }
                             }
                         },

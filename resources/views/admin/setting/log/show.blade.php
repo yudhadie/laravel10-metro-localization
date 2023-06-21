@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-end py-6 px-9">
-                    <a href="{{ route('log-activity.index') }}" class="btn btn-light me-3">Back</a>
+                    <a href="{{ route('log-activity.index') }}" class="btn btn-light me-3">{{ __('button.back') }}</a>
                 </div>
             </div>
         </div>

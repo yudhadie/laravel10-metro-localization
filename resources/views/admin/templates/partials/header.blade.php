@@ -33,6 +33,24 @@
 
                {{-- @include('admin.templates.partials.notif') --}}
 
+               <div class="app-navbar-item ms-1 ms-md-3" id="kt_header_user_menu_toggle">
+                    <div class="cursor-pointer symbol symbol-30px symbol-md-40px"
+                        data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                        data-kt-menu-attach="parent"
+                        data-kt-menu-placement="bottom-end">
+                        {{strtoupper(Lang::locale())}}
+                    </div>
+                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-100px" data-kt-menu="true">
+                        <div class="menu-item">
+                            <a href="{{route('lang','en')}}" class="menu-link px-5 {{ Lang::locale() == 'en' ? 'active' : '' }}">EN</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="{{route('lang','id')}}" class="menu-link px-5 {{ Lang::locale() == 'id' ? 'active' : '' }}">ID</a>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="app-navbar-item ms-1 ms-md-3">
                     <a href="#" class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px" data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
                         <span class="svg-icon theme-light-show svg-icon-2">

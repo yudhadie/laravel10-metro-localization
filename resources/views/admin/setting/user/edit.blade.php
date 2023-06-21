@@ -93,11 +93,13 @@
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-end py-6 px-9">
-                            <a href="{{ route('user.index') }}" class="btn btn-light me-3">Back</a>
+                            <a href="{{ route('user.index') }}" class="btn btn-light me-3">{{ __('button.back') }}</a>
                             <button type="submit" class="btn btn-primary" id="modal_form_submit">
-                                <span class="indicator-label">Save</span>
-                                <span class="indicator-progress">Please wait...
-                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                <span class="indicator-label">{{ __('button.save') }}</span>
+                                <span class="indicator-progress">
+                                    {{ __('button.wait') }}
+                                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                </span>
                             </button>
                         </div>
                     </form>
@@ -135,28 +137,28 @@
                     'name': {
                         validators: {
                             notEmpty: {
-                                message: 'Silahkan isi nama!'
+                                message: '{{ __('validation.notempty') }}'
                             }
                         }
                     },
                     'email': {
                         validators: {
                             notEmpty: {
-                                message: 'Silahkan isi dengan format email!'
+                                message: '{{ __('validation.notemail') }}'
                             }
                         }
                     },
                     'current_team_id': {
                         validators: {
                             notEmpty: {
-                                message: 'Silahkan pilih Role!'
+                                message: '{{ __('validation.notdrop') }}'
                             }
                         }
                     },
                     'active': {
                         validators: {
                             notEmpty: {
-                                message: 'Silahkan pilih status!'
+                                message: '{{ __('validation.notdrop') }}'
                             }
                         }
                     },

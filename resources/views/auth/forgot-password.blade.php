@@ -20,8 +20,8 @@
 							<form class="form w-100" id="reset_form" method="POST" action="{{ route('password.email') }}">
                                 @csrf
 								<div class="text-center mb-10">
-									<h1 class="text-dark fw-bolder mb-3">Forgot Password ?</h1>
-									<div class="text-gray-500 fw-semibold fs-6">Enter your email to reset your password.</div>
+									<h1 class="text-dark fw-bolder mb-3">{{ __('auth.forgot') }}</h1>
+									<div class="text-gray-500 fw-semibold fs-6">{{ __('auth.forgot_email') }}</div>
 								</div>
                                 {{-- @include('admin.templates.partials.head-alert') --}}
 								<div class="fv-row mb-8">
@@ -29,11 +29,13 @@
 								</div>
 								<div class="d-flex flex-wrap justify-content-center pb-lg-0">
 									<button type="button" id="reset_submit" class="btn btn-primary me-4">
-										<span class="indicator-label">Submit</span>
-										<span class="indicator-progress">Please wait...
-										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+										<span class="indicator-label">{{ __('button.submit') }}</span>
+										<span class="indicator-progress">
+                                            {{ __('button.wait') }}
+										    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                        </span>
 									</button>
-									<a href="{{route('dashboard')}}" class="btn btn-light">Cancel</a>
+									<a href="{{route('dashboard')}}" class="btn btn-light"> {{ __('button.cancel') }}</a>
 								</div>
 							</form>
 						</div>
@@ -53,8 +55,8 @@
                         'email': {
                             validators: {
                                 notEmpty: {
-                                    message: 'Silahkan isi dengan format email!'
-                                }
+                                    message: '{{ __('validation.notemail') }}'
+                                },
                             }
                         },
                     },

@@ -37,8 +37,8 @@
 
 @section('create')
     <div class="d-flex align-items-center gap-2 gap-lg-3">
-        <a href="{{ route('report.user') }}" target="_blank" class="btn btn-sm fw-bold btn-info">Print</a>
-        <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#modal_add">Create</a>
+        <a href="{{ route('report.user') }}" target="_blank" class="btn btn-sm fw-bold btn-info">{{ __('button.print') }}</a>
+        <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#modal_add">{{ __('button.create') }}</a>
     </div>
 @endsection
 
@@ -117,35 +117,35 @@
                     'name': {
                         validators: {
                             notEmpty: {
-                                message: 'Silahkan isi nama!'
+                                message: '{{ __('validation.notempty') }}'
                             }
                         }
                     },
                     'email': {
                         validators: {
                             notEmpty: {
-                                message: 'Silahkan isi dengan format email!'
+                                message: '{{ __('validation.notemail') }}'
                             }
                         }
                     },
                     'password': {
                         validators: {
                             notEmpty: {
-                                message: 'Silahkan isi password!'
+                                message: '{{ __('validation.notempty') }}'
                             }
                         }
                     },
                     'current_team_id': {
                         validators: {
                             notEmpty: {
-                                message: 'Silahkan pilih Role!'
+                                message: '{{ __('validation.notdrop') }}'
                             }
                         }
                     },
                     'active': {
                         validators: {
                             notEmpty: {
-                                message: 'Silahkan pilih status!'
+                                message: '{{ __('validation.notdrop') }}'
                             }
                         }
                     },

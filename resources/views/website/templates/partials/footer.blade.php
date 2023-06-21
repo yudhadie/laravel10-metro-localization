@@ -71,10 +71,10 @@
                 </div>
                 <ul class="menu menu-gray-600 menu-hover-primary fw-semibold fs-6 fs-md-5 order-1 mb-5 mb-md-0">
                     <li class="menu-item">
-                        <a href="lang/id" class="menu-link px-2 {{ Lang::locale() == 'id' ? 'text-primary' : '' }}">Indonesia</a>
+                        <a href="{{route('lang','id')}}" class="menu-link px-2 {{ Lang::locale() == 'id' ? 'text-primary' : '' }}">Indonesia</a>
                     </li>
                     <li class="menu-item mx-5">
-                        <a href="lang/en" class="menu-link px-2 {{ Lang::locale() == 'en' ? 'text-primary' : '' }}">English</a>
+                        <a href="{{route('lang','en')}}" class="menu-link px-2 {{ Lang::locale() == 'en' ? 'text-primary' : '' }}">English</a>
                     </li>
                 </ul>
             </div>

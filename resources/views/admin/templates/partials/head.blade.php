@@ -3,7 +3,7 @@
         @isset($title)
             {{$title}} -
         @endisset
-        Triton Creative
+        {{env('APP_WEB', 'null')}}
     </title>
     <meta charset="utf-8" />
     <meta name="description" content="tritoncreative.id" />

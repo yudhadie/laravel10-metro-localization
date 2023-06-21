@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 //Lokasi
 if (file_exists(app_path('Http/Controllers/LocalizationController.php')))
 {
-    Route::get('lang/{locale}', [App\Http\Controllers\LocalizationController::class , 'lang']);
+    Route::get('lang/{locale}', [App\Http\Controllers\LocalizationController::class , 'lang'])->name('lang');
 }
 
 //Website
