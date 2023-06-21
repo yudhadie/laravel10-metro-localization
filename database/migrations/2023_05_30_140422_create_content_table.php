@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('content_category_id')->unsigned();
             $table->string('title');
             $table->text('desc');
+            $table->string('title_en');
+            $table->text('desc_en');
             $table->softDeletes();
             $table->timestamps();
 

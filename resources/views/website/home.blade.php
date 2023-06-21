@@ -46,9 +46,14 @@
                         <div class="text-center mb-10 mb-md-0">
                             <div class="d-flex flex-center mb-5">
                                 <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">{{$loop->iteration}}</span>
-                                <div class="fs-5 fs-lg-3 fw-bold text-dark">{{$item->title}}</div>
+                                <div class="fs-5 fs-lg-3 fw-bold text-dark">
+                                    {{ Lang::locale() == 'id' ? $item->title : $item->title_en }}
+                                </div>
                             </div>
-                            <div class="fw-semibold fs-6 fs-lg-4 text-muted">{{$item->desc}}</div>
+                            <div class="fw-semibold fs-6 fs-lg-4 text-muted">
+                                {{-- {{$item->desc}} --}}
+                                {{ Lang::locale() == 'id' ? $item->desc : $item->desc_en }}
+                            </div>
                         </div>
                     </div>
                     @endforeach

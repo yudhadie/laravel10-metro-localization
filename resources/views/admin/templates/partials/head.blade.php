@@ -3,7 +3,7 @@
         @isset($title)
             {{$title}} -
         @endisset
-        {{env('APP_WEB', 'null')}}
+        {{env('APP_WEB')}}
     </title>
     <meta charset="utf-8" />
     <meta name="description" content="tritoncreative.id" />

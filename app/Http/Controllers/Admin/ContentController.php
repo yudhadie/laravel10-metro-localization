@@ -7,6 +7,7 @@ use App\Models\Content;
 use App\Models\ContentCategory;
 use Diglactic\Breadcrumbs\Breadcrumbs;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Lang;
 
 class ContentController extends Controller
 {
@@ -76,13 +77,22 @@ class ContentController extends Controller
     {
         // $data = Content::onlyTrashed();
         // $data = Content::withTrashed();
-        $data = Content::all();
+        $data = Content::select('id','title','title_en','content_category_id')->get();
 
         return datatables()->of($data)
         ->addColumn('action', 'admin.content.action')
         ->addColumn('category', function($data){
             return $data->content_category->name;
         })
+        ->editColumn('title', function($data){
+            if (Lang::locale() == 'en') {
+                $title = $data->title_en;
+              } else {
+                $title = $data->title;
+              }
+                return $title;
+        })
+        ->removeColumn('title_en')
         ->addIndexColumn()
         ->rawColumns(['action'])
         ->toJson();
